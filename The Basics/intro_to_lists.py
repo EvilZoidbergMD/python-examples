@@ -6,8 +6,8 @@ def main():
     #The index number is the order they are in. However, programming languages
     #start counting at 0, not at 1. This means that 'apple' is in the 0 position
     #in our list, and 'dog' is in the 3 position.
-    print(words[0])
-    print(words[3])
+    print(words[0]) #Prints 'apple'
+    print(words[3]) #Prints 'dog'
 
 
 
@@ -19,8 +19,8 @@ def main():
     #list instead of from the front. The last item in the list can be gotten with
     #the index of -1. -2 would be the second to last item. -3 would be the third to
     #last item, and so on.
-    print(words[-1])
-    print(words[-2])
+    print(words[-1]) #Prints 'dog'
+    print(words[-2]) #Prints 'cat'
 
 
 
@@ -58,13 +58,36 @@ def main():
     word = sentence[-3:]
     print(word) #Prints 'dog'
     word = sentence[27:]
-    print(word) #Prints 'the lazy brown dog'
+    print(word) #Prints 'over the lazy brown dog'
 
     #This can also be done the other way to start at the beginning of the string
     word = sentence[:3]
     print(word) #Prints 'The'
     word = sentence[:-4]
     print(word) #Prints 'The quick brown fox jumped over the lazy brown'
+
+
+
+    print('\n')
+
+
+
+    #Lastly, lists can hold any type of data. Integers, strings, characters, booleans, even
+    #other lists! The list below holds multiple other lists.
+    omnilist = [[10, 5, 7], [True, False], ['apple', 'banana', 'cat', 'dog']]
+
+    #Using the indexes will get us the different lists
+    print(omnilist[0]) #Prints the first list
+    print(omnilist[1]) #Prints the second list
+    print(omnilist[2]) #Prints the third list
+
+    print('\n')
+
+    #If you want something out of one of the particular lists, you can chain the indexes.
+    #The first index tells it what list to use, and the second index tells it which item.
+    print(omnilist[0][1]) #Prints 5
+    print(omnilist[1][0]) #Prints True
+    print(omnilist[2][3]) #Prints 'dog'
 
 
 if __name__ == '__main__':
